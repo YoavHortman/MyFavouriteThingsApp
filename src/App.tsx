@@ -28,6 +28,7 @@ class App extends React.Component<{}, AppState> {
     }
 
     sortMovies = (movie1: FavouriteMovie, movie2: FavouriteMovie) => {
+        // This makes the sort "stable" (https://en.wikipedia.org/wiki/Sorting_algorithm#Stability)
         if (movie1.rating === movie2.rating) {
             return movie2.id - movie1.id;
         }
