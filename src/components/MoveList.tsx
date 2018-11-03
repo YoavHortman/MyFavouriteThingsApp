@@ -14,6 +14,7 @@ export class MoveList extends React.Component<MovieListProps> {
                 {this.props.movies.map(movie => {
                     return (
                         <ListItem
+                            key={movie.id}
                             item={movie}
                             onRateClick={this.props.onRateClick}
                         />
@@ -23,3 +24,4 @@ export class MoveList extends React.Component<MovieListProps> {
         )
     }
 }
+

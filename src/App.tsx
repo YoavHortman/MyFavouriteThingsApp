@@ -94,7 +94,6 @@ class App extends React.Component<{}, AppState> {
                         >
                             {this.state.randomRatingMode ? "Turn random mode OFF" : "Turn random mode ON"}
                         </div>
-                        {/* App body will flex to bottom, content inside will scroll properly*/}
                         <div className={"App_body"}>
                             <MoveList
                             movies={this.state.movies}
