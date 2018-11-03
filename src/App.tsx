@@ -54,6 +54,8 @@ class App extends React.Component<{}, AppState> {
     }
 
     async randomRater() {
+        // This function is using the state and not receiving the list of movies
+        // because if the list changes during the random rate it might break
         if (this.state.movies === "LOADING") {
             throw new Error("This can never happen, so to make type script happy we throw");
         }
@@ -76,16 +78,29 @@ class App extends React.Component<{}, AppState> {
 
     public render() {
         return (
-            <div className="App">
+            <div className={"App_root"}>
+                <div className={"App_header"}>
+                    Favourite Movie List
+                </div>
                 {this.state.movies === "LOADING" ?
-                    <div>Loading movies</div>
+                    <div className={"App_loading"}>
+                        Loading movies...
+                    </div>
                     :
-                    <div>
-                        <button onClick={this.toggleRandomRatingMode}>{this.state.randomRatingMode ? "Turn random mode OFF" : "Turn random mode ON"}</button>
-                        <MoveList
+                    <div className={"App_bodyContainer"}>
+                        <div
+                            className={"App_randomButton"}
+                            onClick={this.toggleRandomRatingMode}
+                        >
+                            {this.state.randomRatingMode ? "Turn random mode OFF" : "Turn random mode ON"}
+                        </div>
+                        {/* App body will flex to bottom, content inside will scroll properly*/}
+                        <div className={"App_body"}>
+                            <MoveList
                             movies={this.state.movies}
                             onRateClick={this.onRateClick}
-                        />
+                            />
+                        </div>
                     </div>
                 }
             </div>

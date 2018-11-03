@@ -1,0 +1,25 @@
+.ListItem_root {
+    margin: 15px;
+    background: #f7f7f7;
+    border-radius: 3px;
+    transition: 0.3s;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.ListItem_root:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background: #f1f1f1;
+}
+
+.ListItem_rowTitle {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.ListItem_rowContainer {
+    margin: 2px;
+    display:flex;
+    align-items: center;
+}

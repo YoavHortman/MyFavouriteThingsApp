@@ -35,35 +35,35 @@ export const data: FavouriteMovie[] =
             name: "I like lots of movies4",
             createdBy: "me",
             lengthInMinutes: 100,
-            rating: 5
+            rating: 3
         },
         {
             id: 6,
             name: "I like lots of movies5",
             createdBy: "me",
             lengthInMinutes: 100,
-            rating: 5
+            rating: 4
         },
         {
             id: 7,
             name: "I like lots of movies6",
             createdBy: "me",
             lengthInMinutes: 100,
-            rating: 5
+            rating: 2
         },
         {
             id: 8,
             name: "I like lots of movies7",
             createdBy: "me",
             lengthInMinutes: 100,
-            rating: 5
+            rating: 2
         },
         {
             id: 9,
             name: "I like lots of movies8",
             createdBy: "me",
             lengthInMinutes: 100,
-            "rating": 5
+            "rating": 3
         },
         {
             id: 10,
@@ -77,6 +77,6 @@ export const data: FavouriteMovie[] =
             name: "I like lots of movies10",
             createdBy: "me",
             lengthInMinutes: 100,
-            rating: 5
+            rating: 1
         }
     ];
