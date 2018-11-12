@@ -2,7 +2,7 @@ import * as React from "react";
 import {FavouriteMovie} from "../models/movie";
 import './ListItem.css'
 // @ts-ignore
-import StarRatingComponent = require("react-star-rating-component");
+const StarRatingComponent = require("react-star-rating-component");
 
 export interface ListItemProps {
     item: FavouriteMovie;
